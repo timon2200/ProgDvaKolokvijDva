@@ -1,0 +1,56 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+.card {
+  color: blue;
+  height: 500px;
+}
+
+.izbornik {
+  width: 100%;
+  height: 100px;
+  background: green;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.opcije {
+  color: white;
+  width: 33%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.podnozje {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 15%;
+}
+
+.slidecontainer {
+  display: none;
+}
+
+.slika1 {
+  display: none;
+  width: 520px;
+}
+.slika2 {
+  display: none;
+  width: 520px;
+}
