@@ -32,10 +32,10 @@ hideSlider = () => {
 
 slide = document.getElementById("myRange");
 
-slide.onchange = function() {
+slide.oninput = function() {
   val = document.getElementById("myRange").value;
-  document.getElementById("cardCont").style.backgroundColor =
-    "rgb(" + val + "," + "0" + "," + "0" + ")";
+  document.getElementById("cardContainer").style.backgroundColor =
+    "rgb(" + "255" + "," + val + "," + val + ")";
 };
 
 updateVrijeme = () => {
@@ -43,55 +43,31 @@ updateVrijeme = () => {
 
   d = new Date();
   mjesec = d.getMonth();
-  mjesectostring = "nistajos";
+
+  mjeseci = [
+    "Siječanj",
+    "Veljača",
+    "Ožujak",
+    "Travanj",
+    "Svibanj",
+    "Lipanj",
+    "Srpanj",
+    "Kolovoz",
+    "Rujan",
+    "Listopad",
+    "Studeni",
+    "Prosinac"
+  ];
 
   vrijeme = d.getHours() + ":" + d.getMinutes();
   console.log(vrijeme);
-  switch (mjesec) {
-    case 0:
-      mjesectostring = "Siječanj";
-      break;
-    case 1:
-      mjesectostring = "Veljača";
-      break;
-    case 2:
-      mjesectostring = "Ožujak";
-      break;
-    case 3:
-      mjesectostring = "Travanj";
-      break;
-    case 4:
-      mjesectostring = "Svibanj";
-      break;
-    case 5:
-      mjesectostring = "Lipanj";
-      break;
-    case 6:
-      mjesectostring = "Srpanj";
-      break;
-    case 7:
-      mjesectostring = "Kolovoz";
-      break;
-    case 8:
-      mjesectostring = "Rujan";
-      break;
-    case 9:
-      mjesectostring = "Listopad";
-      break;
-    case 10:
-      mjesectostring = "Studeni";
-      break;
-    case 11:
-      mjesectostring = "Prosinac";
-      break;
-  }
-  console.log(mjesectostring);
 
-  document.getElementById("vrij").innerHTML = mjesectostring + " " + vrijeme;
+  document.getElementById("trenVrijeme").innerHTML =
+    mjeseci[mjesec] + " " + vrijeme;
 };
 updateVrijeme();
 
 var Predmet =
   '{ "predmeti" : [' +
-  '{ "naziv":"bla bla" , "predavac":"ja ti ko god", "studij":"zfj","semestar":"1" },' +
-  '{ "naziv":"bla bla" , "predavac":"ja ti ko god", "studij":"zfj","semestar":"1" }]}';
+  '{ "naziv":"Prog2" , "predavac":"Stan", "studij":"MOP","semestar":"3" },' +
+  '{ "naziv":"Fiz" , "predavac":"Kliček", "studij":"MOP","semestar":"1" }]}';
